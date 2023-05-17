@@ -17,17 +17,12 @@ const Header = () => {
         <Link to="/addtoy">Add a Toy</Link>
       </li>
       <li>
-        <Link to="/blogs"></Link>
-      </li>
-      <li>
-        <Link className="btn btn-outline" to="/login">
-          Login
-        </Link>
+        <Link to="/blogs">Blogs</Link>
       </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-pink-50 md:px-[8%]">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -65,10 +60,12 @@ const Header = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navLink}</ul>
+        <ul className="menu menu-horizontal px-1 space-x-1 font-medium">{navLink}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Get started</a>
+        <Link className="btn btn-outline" to="/login">
+          Login
+        </Link>
       </div>
     </div>
   );
