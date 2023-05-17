@@ -1,10 +1,42 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layouts/Main";
+import Home from "../Pages/Home/Home/Home";
+import AllToys from "../Pages/AllToys/AllToys";
+import MyToys from "../Pages/MyToys/MyToys";
+import AddToy from "../Pages/AddToy/AddToy";
+import Blogs from "../Pages/Blogs/Blogs";
+import Login from "../Pages/Login/Login";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/alltoys",
+        element: <AllToys></AllToys>,
+      },
+      {
+        path: "/mytoys",
+        element: <MyToys></MyToys>,
+      },
+      {
+        path: "/addtoy",
+        element: <AddToy></AddToy>,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+    ],
   },
 ]);
 export default router;
