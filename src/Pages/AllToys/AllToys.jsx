@@ -6,12 +6,21 @@ import Toys from "./Toys";
 const AllToys = () => {
   const allToys = useLoaderData();
   const [toys, setToys] = useState(allToys);
+  const handleSearch = (event) => {
+    event.preventDefault();
+    const inputValue = event.target.search.value;
+    console.log(inputValue);
+    fetch(`http://localhost:5000/toys/name/?name=${inputValue}&sort=1`)
+      .then((res) => res.json())
+      .then((data) => setToys(data));
+  };
   return (
     <div>
       <ToyBanner name="All Toys"></ToyBanner>
-      <form className="mt-10 text-center">
+      <form onSubmit={handleSearch} className="mt-10 text-center">
         <input
           type="search"
+          name="search"
           placeholder="Search toys by name"
           className="input input-bordered rounded-none input-error w-1/2  mx-auto "
         />

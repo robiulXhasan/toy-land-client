@@ -33,7 +33,7 @@ const Details = () => {
               <Rating style={{ maxWidth: 100 }} value={rating} readOnly /> {rating}
             </p>
             <p className=" text-lg">
-              <span className="font-medium"> Detail Description:</span> <br />
+              <span className="font-medium"> Description:</span> <br />
               {description}
             </p>
           </div>

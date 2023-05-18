@@ -2,6 +2,7 @@ import React from "react";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
+import { Link } from "react-router-dom";
 
 const ToysCard = ({ toy }) => {
   const { _id, picture, toy_name, rating, price } = toy;
@@ -17,7 +18,9 @@ const ToysCard = ({ toy }) => {
           Rating: <Rating style={{ maxWidth: 100 }} value={rating} readOnly /> {rating}
         </p>
         <div className="card-actions ">
-          <button className="btn btn-sm btn-outline text-xs">Show Details</button>
+          <Link to={`alltoys/toy/${_id}`} className="btn btn-sm btn-outline text-xs">
+            Show Details
+          </Link>
         </div>
       </div>
     </div>
