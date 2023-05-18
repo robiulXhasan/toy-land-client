@@ -40,17 +40,25 @@ const Category = () => {
         </TabList>
 
         <TabPanel>
-          <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
             {toys.map((toy) => (
               <ToysCard key={toy._id} toy={toy}></ToysCard>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <h2>{toys.length}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
+            {toys.map((toy) => (
+              <ToysCard key={toy._id} toy={toy}></ToysCard>
+            ))}
+          </div>
         </TabPanel>
         <TabPanel>
-          <h2>{toys.length}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
+            {toys.map((toy) => (
+              <ToysCard key={toy._id} toy={toy}></ToysCard>
+            ))}
+          </div>
         </TabPanel>
       </Tabs>
     </div>
