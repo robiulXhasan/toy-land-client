@@ -8,7 +8,7 @@ const AllToys = () => {
   const [toys, setToys] = useState(allToys);
   return (
     <div>
-      <ToyBanner></ToyBanner>
+      <ToyBanner name="All Toys"></ToyBanner>
       <form className="mt-10 text-center">
         <input
           type="search"
@@ -32,7 +32,7 @@ const AllToys = () => {
               </tr>
             </thead>
             <tbody>
-              {toys.map((toy) => (
+              {toys?.map((toy) => (
                 <Toys key={toy._id} toy={toy}></Toys>
               ))}
             </tbody>

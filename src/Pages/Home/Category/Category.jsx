@@ -28,8 +28,8 @@ const Category = () => {
             </span>
           </Tab>
           <Tab>
-            <span onClick={() => handleCategoryData("truck")} className="text-xl font-medium">
-              Truck
+            <span onClick={() => handleCategoryData("jeep")} className="text-xl font-medium">
+              Jeep
             </span>
           </Tab>
           <Tab>
