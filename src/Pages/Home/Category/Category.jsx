@@ -18,7 +18,7 @@ const Category = () => {
   };
   return (
     <div className="md:w-10/12 mx-auto text-center mt-20">
-      <h4 className="text-xl font-semibold text-red-600">Category</h4>
+      <h4 className="text-xl font-semibold text-red-600">CATEGORY</h4>
       <h1 className="text-4xl font-bold mb-8">Category Products</h1>
       <Tabs selectedTabClassName="">
         <TabList>
