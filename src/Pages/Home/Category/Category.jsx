@@ -1,0 +1,60 @@
+import React, { useEffect, useState } from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+import ToysCard from "./ToysCard";
+
+const Category = () => {
+  const [toys, setToys] = useState([]);
+  useEffect(() => {
+    fetch(`http://localhost:5000/toys/category?subcategory=sports car&sort=1`)
+      .then((res) => res.json())
+      .then((data) => setToys(data));
+  }, []);
+  console.log(toys);
+  const handleCategoryData = (subcategory) => {
+    fetch(`http://localhost:5000/toys/category?subcategory=${subcategory}&sort=1`)
+      .then((res) => res.json())
+      .then((data) => setToys(data));
+  };
+  return (
+    <div className="md:w-10/12 mx-auto text-center mt-20">
+      <h4 className="text-xl font-semibold text-red-600">Category</h4>
+      <h1 className="text-4xl font-bold mb-8">Category Products</h1>
+      <Tabs selectedTabClassName="">
+        <TabList>
+          <Tab>
+            <span onClick={() => handleCategoryData("sports car")} className="text-xl font-medium">
+              Sports car
+            </span>
+          </Tab>
+          <Tab>
+            <span onClick={() => handleCategoryData("truck")} className="text-xl font-medium">
+              Truck
+            </span>
+          </Tab>
+          <Tab>
+            <span onClick={() => handleCategoryData("regular car")} className="text-xl font-medium">
+              Regular car
+            </span>
+          </Tab>
+        </TabList>
+
+        <TabPanel>
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            {toys.map((toy) => (
+              <ToysCard key={toy._id} toy={toy}></ToysCard>
+            ))}
+          </div>
+        </TabPanel>
+        <TabPanel>
+          <h2>{toys.length}</h2>
+        </TabPanel>
+        <TabPanel>
+          <h2>{toys.length}</h2>
+        </TabPanel>
+      </Tabs>
+    </div>
+  );
+};
+
+export default Category;

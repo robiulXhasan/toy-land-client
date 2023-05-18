@@ -1,0 +1,50 @@
+[
+  {
+    "picture": "sports_car1.jpg",
+    "toy_name": "Super Speedster",
+    "price": "$29.99",
+    "rating": 4.5,
+    "sub_category": "sports car",
+    "quantity": 10
+  },
+  {
+    "picture": "sports_car2.jpg",
+    "toy_name": "Turbo Racer",
+    "price": "$34.99",
+    "rating": 4.2,
+    "sub_category": "sports car",
+    "quantity": 15
+  },
+  {
+    "picture": "truck1.jpg",
+    "toy_name": "Monster Hauler",
+    "price": "$39.99",
+    "rating": 4.7,
+    "sub_category": "truck",
+    "quantity": 5
+  },
+  {
+    "picture": "truck2.jpg",
+    "toy_name": "Off-Road Beast",
+    "price": "$44.99",
+    "rating": 4.4,
+    "sub_category": "truck",
+    "quantity": 8
+  },
+  {
+    "picture": "regular_car1.jpg",
+    "toy_name": "City Cruiser",
+    "price": "$19.99",
+    "rating": 4.0,
+    "sub_category": "regular car",
+    "quantity": 12
+  },
+  {
+    "picture": "regular_car2.jpg",
+    "toy_name": "Family Funride",
+    "price": "$24.99",
+    "rating": 4.3,
+    "sub_category": "regular car",
+    "quantity": 20
+  }
+]
