@@ -22,7 +22,7 @@ const MyToysCard = ({ toy, toys, setToy }) => {
       <td>
         <div className="flex items-center space-x-3">
           <div className="avatar">
-            <div className="mask rounded w-auto h-32">
+            <div className="mask rounded w-auto h-48">
               <img src={picture} alt="Avatar Tailwind CSS Component" />
             </div>
           </div>
@@ -34,11 +34,9 @@ const MyToysCard = ({ toy, toys, setToy }) => {
         </div>
       </td>
       <td className="text-center">
-        <span className="text-xl font-semibold">{price}</span>
+        <span className="text-xl font-semibold">${price}</span>
       </td>
-      <td className="text-center">
-        <span className="text-xl font-semibold">{seller_name}</span>
-      </td>
+
       <td className=" space-x-5 text-center">
         <Link to={`update/${_id}`} className="btn btn-outline text-xl btn-circle  text-green-400">
           <FaEdit />

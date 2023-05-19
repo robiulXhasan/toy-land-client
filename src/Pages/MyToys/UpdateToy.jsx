@@ -1,8 +1,11 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 
 const UpdateToy = () => {
   const id = useParams();
+  const toyData = useLoaderData();
+  const { price, quantity, description } = toyData;
+  console.log(toyData);
   const navigate = useNavigate();
 
   const handleToyUpdate = (event) => {
@@ -50,6 +53,7 @@ const UpdateToy = () => {
                     <input
                       type="text"
                       name="price"
+                      defaultValue={price}
                       placeholder="Enter toy price"
                       className="input input-bordered"
                     />
@@ -61,6 +65,7 @@ const UpdateToy = () => {
                     <input
                       type="text"
                       name="quantity"
+                      defaultValue={quantity}
                       placeholder="Enter quantity"
                       className="input input-bordered"
                     />
@@ -74,6 +79,7 @@ const UpdateToy = () => {
                   <textarea
                     type="text"
                     name="details"
+                    defaultValue={description}
                     placeholder="Enter toy details"
                     className="textarea textarea-bordered"
                   />
