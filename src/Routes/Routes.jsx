@@ -9,6 +9,7 @@ import Login from "../Pages/Login/Login";
 import Details from "../Pages/Shared/Details/Details";
 import Register from "../Pages/Register/Register";
 import PrivateRoutes from "./PrivateRoutes";
+import UpdateToy from "../Pages/MyToys/UpdateToy";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
             <MyToys></MyToys>
           </PrivateRoutes>
         ),
+      },
+      {
+        path: "/mytoys/update/:id",
+        element: <UpdateToy></UpdateToy>,
       },
       {
         path: "/addtoy",

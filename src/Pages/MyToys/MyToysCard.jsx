@@ -27,7 +27,7 @@ const MyToysCard = ({ toy }) => {
         <span className="text-xl font-semibold">{seller_name}</span>
       </td>
       <td className=" space-x-5 text-center">
-        <Link to={`edit/${_id}`} className="btn btn-outline text-xl btn-circle  text-green-400">
+        <Link to={`update/${_id}`} className="btn btn-outline text-xl btn-circle  text-green-400">
           <FaEdit />
         </Link>
         <button className="btn btn-outline text-xl btn-circle  text-red-600">
