@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import ToyBanner from "../ToyBanner/ToyBanner";
 import { useLoaderData } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 const Details = () => {
   const toyDetails = useLoaderData();
-  const { toy_name, picture, price, rating, quantity, description } = toyDetails;
+  const { toy_name, picture, price, rating, quantity, description, seller_email, seller_name } =
+    toyDetails;
   return (
     <div>
       <ToyBanner name="Toy Details"></ToyBanner>
@@ -17,10 +19,12 @@ const Details = () => {
           <div>
             <h1 className="text-4xl font-bold">{toy_name}</h1>
             <p className="pt-6 text-lg">
-              <span className="font-medium">Seller name:</span>
+              <span className="font-medium">Seller name: </span>
+              {seller_name}
             </p>
             <p className=" text-lg">
               <span className="font-medium">Seller email: </span>
+              {seller_email}
             </p>
             <p className=" text-lg">
               <span className="font-medium">Price: </span> {price}

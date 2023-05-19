@@ -20,9 +20,13 @@ const Header = () => {
       <li>
         <Link to="/alltoys">All Toys</Link>
       </li>
-      <li>
-        <Link to="/mytoys">My Toys</Link>
-      </li>
+      {user ? (
+        <li>
+          <Link to="/mytoys">My Toys</Link>
+        </li>
+      ) : (
+        <></>
+      )}
       <li>
         <Link to="/addtoy">Add a Toy</Link>
       </li>

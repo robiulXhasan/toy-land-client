@@ -102,12 +102,12 @@ const Login = () => {
             </div>
             <p className="text-red-600">{error}</p>
             <div className="divider">OR</div>
-            <div
+            <button
               onClick={handleGoogleLogin}
-              className="flex items-center gap-2 border border-purple-300 p-2 justify-center "
+              className="flex btn btn-outline btn-secondary items-center gap-2 border justify-center "
             >
               <FaGoogle /> Login with Google
-            </div>
+            </button>
           </div>
         </form>
       </div>
