@@ -6,7 +6,7 @@ import MyToysCard from "./MyToysCard";
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const email = user?.email;
-  console.log(email);
+
   const [toys, setToy] = useState([]);
   const [option, setOption] = useState(0);
   useEffect(() => {
@@ -22,7 +22,6 @@ const MyToys = () => {
       setOption(-1);
     }
   };
-  console.log(toys);
 
   return (
     <div>

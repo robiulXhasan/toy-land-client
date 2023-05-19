@@ -1,21 +1,34 @@
 import React from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const MyToysCard = ({ toy, toys, setToy }) => {
   const { _id, toy_name, picture, sub_category, price, quantity, seller_name } = toy;
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/toys/${id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data.deletedCount > 0) {
-          const remaining = toys.filter((toy) => toy._id !== id);
-          setToy(remaining);
-        }
-      });
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/toys/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
+              const remaining = toys.filter((toy) => toy._id !== id);
+              setToy(remaining);
+              Swal.fire("Deleted!", "Successfully deleted.", "success");
+            }
+          });
+      }
+    });
   };
   return (
     <tr>

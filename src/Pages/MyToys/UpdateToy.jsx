@@ -1,11 +1,11 @@
 import React from "react";
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateToy = () => {
   const id = useParams();
   const toyData = useLoaderData();
   const { price, quantity, description } = toyData;
-  console.log(toyData);
   const navigate = useNavigate();
 
   const handleToyUpdate = (event) => {
@@ -32,8 +32,14 @@ const UpdateToy = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.modifiedCount > 0) {
+          Swal.fire({
+            title: "Success!",
+            text: "Successfully updated Toy Information ",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+          form.reset();
           navigate("/mytoys");
         }
       });

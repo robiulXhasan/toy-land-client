@@ -1,6 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddToy = () => {
   const { user } = useContext(AuthContext);
@@ -36,14 +37,23 @@ const AddToy = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "Toy Added Successfully !",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+          form.reset();
+        }
       });
   };
   return (
     <div className="bg-base-200">
-      <div className="hero py-16 md:w-10/12 mx-auto">
+      <h1 className="text-center text-3xl font-bold  pt-16">Add a Toy</h1>
+      <div className="hero pb-16 md:w-10/12 mx-auto">
         <div className="hero-content w-full">
-          <div className="card w-full shadow bg-base-100">
+          <div className="card w-full shadow px-5 bg-base-100">
             <form onSubmit={handleAddToy}>
               <div className="card-body space-y-3">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
@@ -157,7 +167,7 @@ const AddToy = () => {
                       name="sub_category"
                       className="select select-bordered font-normal w-full"
                     >
-                      <option >Choose sub-category</option>
+                      <option>Choose sub-category</option>
                       <option>Sports Car</option>
                       <option>Jeep</option>
                       <option>Regular Car</option>
@@ -165,7 +175,7 @@ const AddToy = () => {
                   </div>
                 </div>
 
-                <div className="form-control mt-6">
+                <div className="form-control pt-6">
                   <input type="submit" className="btn btn-dark" value="Add a Toy" />
                 </div>
               </div>

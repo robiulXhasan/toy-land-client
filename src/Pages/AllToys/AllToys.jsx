@@ -23,7 +23,11 @@ const AllToys = () => {
           placeholder="Search toys by name"
           className="input input-bordered rounded-none input-error w-1/2  mx-auto "
         />
-        <input className="bg-red-600  btn rounded-none text-white" type="submit" value="Search" />
+        <input
+          className="bg-red-600 input input-bordered  btn rounded-none text-white "
+          type="submit"
+          value="Search"
+        />
       </form>
       <div className="w-10/12 mx-auto mt-5">
         <h1 className="text-xl font-bold text-red-600 text-center"> Toys</h1>

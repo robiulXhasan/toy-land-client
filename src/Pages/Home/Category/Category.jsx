@@ -10,7 +10,6 @@ const Category = () => {
       .then((res) => res.json())
       .then((data) => setToys(data));
   }, []);
-  console.log(toys);
   const handleCategoryData = (subcategory) => {
     fetch(`http://localhost:5000/toys/category?subcategory=${subcategory}&sort=1`)
       .then((res) => res.json())
