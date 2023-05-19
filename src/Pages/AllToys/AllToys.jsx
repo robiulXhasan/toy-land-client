@@ -9,7 +9,6 @@ const AllToys = () => {
   const handleSearch = (event) => {
     event.preventDefault();
     const inputValue = event.target.search.value;
-    console.log(inputValue);
     fetch(`http://localhost:5000/toys/name/?name=${inputValue}&sort=1`)
       .then((res) => res.json())
       .then((data) => setToys(data));
