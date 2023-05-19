@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => {
+        console.error(error.message);
+      });
+  };
   const navLink = (
     <>
       <li>
@@ -63,9 +73,25 @@ const Header = () => {
         <ul className="menu menu-horizontal px-1 space-x-1 font-medium">{navLink}</ul>
       </div>
       <div className="navbar-end">
-        <Link className="btn btn-outline" to="/login">
-          Login
-        </Link>
+        {user ? (
+          <div className="flex gap-3">
+            <img
+              data-toggle="tooltip"
+              title={user?.displayName}
+              data-placement="bottom"
+              className=" w-12 h-12 rounded-full cursor-pointer"
+              src={user?.photoURL}
+              alt=""
+            />
+            <Link onClick={handleLogOut} className="btn btn-outline" to="/login">
+              Log Out
+            </Link>
+          </div>
+        ) : (
+          <Link className="btn btn-outline" to="/login">
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
