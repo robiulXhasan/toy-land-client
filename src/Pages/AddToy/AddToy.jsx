@@ -157,7 +157,7 @@ const AddToy = () => {
                       name="sub_category"
                       className="select select-bordered font-normal w-full"
                     >
-                      <option disabled>Choose sub-category</option>
+                      <option >Choose sub-category</option>
                       <option>Sports Car</option>
                       <option>Jeep</option>
                       <option>Regular Car</option>

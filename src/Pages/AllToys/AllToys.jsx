@@ -28,7 +28,7 @@ const AllToys = () => {
       <div className="w-10/12 mx-auto mt-5">
         <h1 className="text-xl font-bold text-red-600 text-center"> Toys</h1>
         <h1 className="text-4xl font-semibold text-center">All Toys</h1>
-        <div className="overflow-x-auto w-full mt-5">
+        <div className="overflow-x-auto w-full my-5">
           <table className="table w-full">
             {/* head */}
             <thead>

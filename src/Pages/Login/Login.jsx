@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaBeer, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { ToastContainer } from "react-toastify";
 
 const Login = () => {
   const { LoginUser, googleLogin } = useContext(AuthContext);
@@ -47,6 +48,7 @@ const Login = () => {
   };
   return (
     <div className="hero min-h-screen  w-10/12 mx-auto">
+      <ToastContainer />
       <div className="hero-content flex-col lg:flex-row gap-20">
         <div className="text-center lg:text-left">
           <img
@@ -69,6 +71,7 @@ const Login = () => {
                 name="email"
                 placeholder="email"
                 className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control">
@@ -79,6 +82,7 @@ const Login = () => {
                 type={show ? "text" : "password"}
                 name="password"
                 placeholder="password"
+                required
                 className="input input-bordered"
               />
             </div>
@@ -92,7 +96,7 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <input type="submit" className="btn btn-secondary" value="Login" />
+              <input type="submit" className="btn btn-dark" value="Login" />
             </div>
             <div className="text-center mt-2">
               <small>Don’t Have An Account ? </small>{" "}
@@ -104,7 +108,7 @@ const Login = () => {
             <div className="divider">OR</div>
             <button
               onClick={handleGoogleLogin}
-              className="flex btn btn-outline btn-secondary items-center gap-2 border justify-center "
+              className="flex btn btn-outline btn-dark items-center gap-2 border justify-center "
             >
               <FaGoogle /> Login with Google
             </button>

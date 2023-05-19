@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Toys = ({ toy }) => {
-  const { _id, toy_name, picture, sub_category, price, quantity } = toy;
+  const { _id, toy_name, picture, sub_category, price, quantity, seller_name } = toy;
   return (
     <tr>
       <td>
@@ -23,7 +23,7 @@ const Toys = ({ toy }) => {
         <span className="text-xl font-semibold">{price}</span>
       </td>
       <td>
-        <span className="text-xl font-semibold">user.displayName</span>
+        <span className="text-lg font-semibold">{seller_name}</span>
       </td>
       <th>
         <Link to={`toy/${_id}`} className="btn btn-outline   text-green-400">

@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Register = () => {
@@ -25,7 +27,7 @@ const Register = () => {
       .then((result) => {
         profileUpdate(name, photoURL)
           .then(() => {
-            //toast("Successfully Registered!!");
+            toast("Successfully Registered!!");
             logOut()
               .then(() => {
                 navigate("/login");
@@ -53,7 +55,7 @@ const Register = () => {
         </div>
         <form
           onSubmit={handleRegister}
-          className="card flex-shrink-0 w-full max-w-sm shadow-2xl border rounded-sm bg-base-100"
+          className="card flex-shrink-0 w-full max-w-md shadow-xl border rounded-sm bg-base-100"
         >
           <div className="card-body">
             <h3 className="text-3xl text-center font-semibold">REGISTER</h3>
@@ -66,6 +68,7 @@ const Register = () => {
                 name="name"
                 placeholder="Enter your name"
                 className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control">
@@ -77,6 +80,7 @@ const Register = () => {
                 name="email"
                 placeholder="Enter your email"
                 className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control">
@@ -88,6 +92,7 @@ const Register = () => {
                 name="password"
                 placeholder="Enter password"
                 className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control">
@@ -99,10 +104,12 @@ const Register = () => {
                 name="photo"
                 placeholder="Enter photo URL"
                 className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control mt-6">
-              <input type="submit" className="btn btn-secondary" value="Register" />
+              <input type="submit" className="btn btn-dark" value="Register" />
+              
             </div>
             <div className="text-center mt-2">
               <small>Already Have An Account ? </small>{" "}

@@ -30,7 +30,7 @@ const MyToys = () => {
       <div className="w-10/12 mx-auto mt-5">
         <h1 className="text-xl font-bold text-red-600 text-center"> Toys</h1>
         <h1 className="text-4xl font-semibold text-center">My Toys</h1>
-        <div className="overflow-x-auto w-full mt-5">
+        <div className="overflow-x-auto w-full my-5">
           <div className="text-end mb-5">
             <p className="text-xl font-medium text-sky-600">Sort By Price: </p>
             <select onChange={handleSort} className="select select-info  max-w-xs">
@@ -45,7 +45,7 @@ const MyToys = () => {
               <tr>
                 <th className="text-center">Toy Information</th>
                 <th className="text-center">Price</th>
-               
+
                 <th className="text-center">Update/Delete</th>
               </tr>
             </thead>
