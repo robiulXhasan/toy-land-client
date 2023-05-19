@@ -14,9 +14,9 @@ const ToysCard = ({ toy }) => {
       <div className="card-body text-start ">
         <h2 className="card-title justify-start">{toy_name}</h2>
         <p>Price: {price}</p>
-        <p className="flex">
+        <div className="flex">
           Rating: <Rating style={{ maxWidth: 100 }} value={rating} readOnly /> {rating}
-        </p>
+        </div>
         <div className="card-actions ">
           <Link to={`alltoys/toy/${_id}`} className="btn btn-sm btn-outline text-xs">
             Show Details
