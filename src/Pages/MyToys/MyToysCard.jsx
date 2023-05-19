@@ -2,8 +2,21 @@ import React from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const MyToysCard = ({ toy }) => {
+const MyToysCard = ({ toy, toys, setToy }) => {
   const { _id, toy_name, picture, sub_category, price, quantity, seller_name } = toy;
+  const handleDelete = (id) => {
+    fetch(`http://localhost:5000/toys/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.deletedCount > 0) {
+          const remaining = toys.filter((toy) => toy._id !== id);
+          setToy(remaining);
+        }
+      });
+  };
   return (
     <tr>
       <td>
@@ -30,7 +43,10 @@ const MyToysCard = ({ toy }) => {
         <Link to={`update/${_id}`} className="btn btn-outline text-xl btn-circle  text-green-400">
           <FaEdit />
         </Link>
-        <button className="btn btn-outline text-xl btn-circle  text-red-600">
+        <button
+          onClick={() => handleDelete(_id)}
+          className="btn btn-outline text-xl btn-circle  text-red-600"
+        >
           <FaTrash />
         </button>
       </td>
