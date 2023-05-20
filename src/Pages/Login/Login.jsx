@@ -3,9 +3,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaBeer, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { ToastContainer } from "react-toastify";
+import useTitle from "../../hooks/useTitle";
 
 const Login = () => {
   const { LoginUser, googleLogin } = useContext(AuthContext);
+  useTitle("Login");
 
   const [show, setShow] = useState(false);
   const [error, setError] = useState("");

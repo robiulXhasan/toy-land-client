@@ -5,8 +5,10 @@ import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
 import { AuthContext } from "../../../Providers/AuthProvider";
+import useTitle from "../../../hooks/useTitle";
 
 const Details = () => {
+  useTitle("Details");
   const toyDetails = useLoaderData();
   const { toy_name, picture, price, rating, quantity, description, seller_email, seller_name } =
     toyDetails;

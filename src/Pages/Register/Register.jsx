@@ -3,8 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../../Providers/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 
 const Register = () => {
+  useTitle("Register");
   const { createUser, profileUpdate, logOut } = useContext(AuthContext);
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -109,7 +111,6 @@ const Register = () => {
             </div>
             <div className="form-control mt-6">
               <input type="submit" className="btn btn-dark" value="Register" />
-              
             </div>
             <div className="text-center mt-2">
               <small>Already Have An Account ? </small>{" "}

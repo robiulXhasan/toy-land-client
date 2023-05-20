@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import ToyBanner from "../Shared/ToyBanner/ToyBanner";
 import { useLoaderData } from "react-router-dom";
 import Toys from "./Toys";
+import useTitle from "../../hooks/useTitle";
 
 const AllToys = () => {
   const allToys = useLoaderData();
+  useTitle("All Toys");
   const [toys, setToys] = useState(allToys);
   const handleSearch = (event) => {
     event.preventDefault();

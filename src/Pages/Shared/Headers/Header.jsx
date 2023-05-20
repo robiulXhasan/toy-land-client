@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProvider";
+import ActiveLink from "../ActiveLink";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -15,23 +16,23 @@ const Header = () => {
   const navLink = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <ActiveLink to="/">Home</ActiveLink>
       </li>
       <li>
-        <Link to="/alltoys">All Toys</Link>
+        <ActiveLink to="/alltoys">All Toys</ActiveLink>
       </li>
       {user ? (
         <li>
-          <Link to="/mytoys">My Toys</Link>
+          <ActiveLink to="/mytoys">My Toys</ActiveLink>
         </li>
       ) : (
         <></>
       )}
       <li>
-        <Link to="/addtoy">Add a Toy</Link>
+        <ActiveLink to="/addtoy">Add a Toy</ActiveLink>
       </li>
       <li>
-        <Link to="/blogs">Blogs</Link>
+        <ActiveLink to="/blogs">Blogs</ActiveLink>
       </li>
     </>
   );
