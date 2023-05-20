@@ -23,7 +23,7 @@ const UpdateToy = () => {
       quantity,
       description,
     };
-    fetch(`http://localhost:5000/update/${id.id}`, {
+    fetch(`https://toy-land-server-five.vercel.app/update/${id.id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -49,6 +49,7 @@ const UpdateToy = () => {
       <div className="hero py-16 md:w-10/12 mx-auto">
         <div className="hero-content w-full">
           <div className="card w-full shadow bg-base-100">
+            <h1 className="text-center text-3xl font-bold mt-6"> Update Toy Information</h1>
             <form onSubmit={handleToyUpdate}>
               <div className="card-body space-y-3">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">

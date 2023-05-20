@@ -28,7 +28,7 @@ const AddToy = () => {
       description,
       sub_category,
     };
-    fetch("http://localhost:5000/toys", {
+    fetch("https://toy-land-server-five.vercel.app/toys", {
       method: "POST",
       headers: {
         "content-type": "application/json",

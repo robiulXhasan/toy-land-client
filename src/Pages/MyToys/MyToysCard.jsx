@@ -16,7 +16,7 @@ const MyToysCard = ({ toy, toys, setToy }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/toys/${id}`, {
+        fetch(`https://toy-land-server-five.vercel.app/toys/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

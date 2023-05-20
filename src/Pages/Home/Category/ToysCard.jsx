@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const ToysCard = ({ toy }) => {
   const { _id, picture, toy_name, rating, price } = toy;
   return (
-    <div className="card card-side  border shadow-xl">
+    <div className="card card-side  border shadow-xl items-center">
       <figure className="w-1/2 p-4">
         <img src={picture} className="rounded-lg" alt="Car" />
       </figure>

@@ -10,7 +10,7 @@ const MyToys = () => {
   const [toys, setToy] = useState([]);
   const [option, setOption] = useState(0);
   useEffect(() => {
-    fetch(`http://localhost:5000/mytoys?email=${email}&sort=${parseInt(option)}`)
+    fetch(`https://toy-land-server-five.vercel.app/mytoys?email=${email}&sort=${parseInt(option)}`)
       .then((res) => res.json())
       .then((data) => setToy(data));
   }, [option]);

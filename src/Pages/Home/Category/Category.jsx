@@ -6,12 +6,12 @@ import ToysCard from "./ToysCard";
 const Category = () => {
   const [toys, setToys] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/toys/category?subcategory=sports car&sort=1`)
+    fetch(`https://toy-land-server-five.vercel.app/toys/category?subcategory=sports car&sort=1`)
       .then((res) => res.json())
       .then((data) => setToys(data));
   }, []);
   const handleCategoryData = (subcategory) => {
-    fetch(`http://localhost:5000/toys/category?subcategory=${subcategory}&sort=1`)
+    fetch(`https://toy-land-server-five.vercel.app/toys/category?subcategory=${subcategory}&sort=1`)
       .then((res) => res.json())
       .then((data) => setToys(data));
   };
