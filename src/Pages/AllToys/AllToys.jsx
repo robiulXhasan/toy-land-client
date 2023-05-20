@@ -36,10 +36,10 @@ const AllToys = () => {
           <table className="table w-full">
             {/* head */}
             <thead>
-              <tr>
+              <tr className="text-center">
                 <th>Toy Information</th>
                 <th>Price</th>
-                <th>Seller</th>
+                <th>Available Quantity</th>
                 <th>Details</th>
               </tr>
             </thead>

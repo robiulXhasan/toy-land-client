@@ -42,12 +42,14 @@ const MyToysCard = ({ toy, toys, setToy }) => {
           <div>
             <div className="font-bold text-xl">{toy_name}</div>
             <div className="text-sm opacity-50 font-medium">Sub category : {sub_category}</div>
-            <div className="text-sm opacity-50 font-medium">Quantity : {quantity}</div>
           </div>
         </div>
       </td>
       <td className="text-center">
         <span className="text-xl font-semibold">${price}</span>
+      </td>
+      <td className="text-center">
+        <span className="text-xl font-semibold">{quantity}</span>
       </td>
 
       <td className=" space-x-5 text-center">

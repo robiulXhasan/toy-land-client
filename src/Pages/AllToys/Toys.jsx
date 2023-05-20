@@ -15,17 +15,17 @@ const Toys = ({ toy }) => {
           <div>
             <div className="font-bold text-xl">{toy_name}</div>
             <div className="text-sm opacity-50 font-medium">Sub category : {sub_category}</div>
-            <div className="text-sm opacity-50 font-medium">Quantity : {quantity}</div>
+            <div className="text-sm opacity-50 font-medium">Seller Name : {seller_name}</div>
           </div>
         </div>
       </td>
-      <td>
-        <span className="text-xl font-semibold">{price}</span>
+      <td className="text-center">
+        <span className="text-xl font-semibold">${price}</span>
       </td>
-      <td>
-        <span className="text-lg font-semibold">{seller_name}</span>
+      <td className="text-center">
+        <span className="text-lg font-semibold">{quantity}</span>
       </td>
-      <th>
+      <th className="text-center">
         <Link to={`toy/${_id}`} className="btn btn-outline   text-green-400">
           View Details
         </Link>
