@@ -15,9 +15,9 @@ const Details = () => {
   return (
     <div>
       <ToyBanner name="Toy Details"></ToyBanner>
-      <div className="hero w-10/12 mx-auto my-10  bg-base-200">
+      <div className="hero w-11/12 md:w-10/12 mx-auto my-10  bg-base-200">
         <div className="hero-content flex-col lg:flex-row gap-10 ">
-          <img src={picture} className="w-1/2 rounded-lg shadow-2xl" />
+          <img src={picture} className="md:w-1/2 rounded-lg shadow-2xl" />
           <div>
             <h1 className="text-4xl font-bold">{toy_name}</h1>
             <p className="pt-6 text-lg">
@@ -29,7 +29,7 @@ const Details = () => {
               {seller_email}
             </p>
             <p className=" text-lg">
-              <span className="font-medium">Price: </span> {price}
+              <span className="font-medium">Price: </span> ${price}
             </p>
             <p className=" text-lg">
               <span className="font-medium">Available Quantity:</span> {quantity}

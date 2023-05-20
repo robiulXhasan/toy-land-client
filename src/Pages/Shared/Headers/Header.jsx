@@ -34,6 +34,15 @@ const Header = () => {
       <li>
         <ActiveLink to="/blogs">Blogs</ActiveLink>
       </li>
+      <li className="md:hidden">
+        {user ? (
+          <Link onClick={handleLogOut} to="/login">
+            Log Out
+          </Link>
+        ) : (
+          <></>
+        )}
+      </li>
     </>
   );
   return (
@@ -88,7 +97,11 @@ const Header = () => {
               src={user?.photoURL}
               alt=""
             />
-            <Link onClick={handleLogOut} className="btn btn-outline" to="/login">
+            <Link
+              onClick={handleLogOut}
+              className="btn btn-outline hidden md:block pt-4 "
+              to="/login"
+            >
               Log Out
             </Link>
           </div>
