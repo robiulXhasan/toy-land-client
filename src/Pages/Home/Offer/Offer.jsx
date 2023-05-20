@@ -12,7 +12,7 @@ const Offer = () => {
           25% Off
         </p>
         <div>
-          <h1 className="text-5xl font-bold">Buy Kids Car Toy</h1>
+          <h1 className="text-2xl md:text-4xl font-bold">Buy Kids Car Toy</h1>
           <p className="py-6">Get 25% off on first order and also get gift voucher.</p>
 
           <button className="btn btn-outline">Buy Now</button>

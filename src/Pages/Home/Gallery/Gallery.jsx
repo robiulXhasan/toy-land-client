@@ -13,7 +13,7 @@ const Gallery = () => {
           Our Toys Gallery
         </h1>
         <div className="w-10/12 mx-auto relative -top-20">
-          <div className="grid grid-cols-2 gap-2 ">
+          <div className="grid  md:grid-cols-2 gap-2 ">
             <img
               className="shadow border-8 border-sky-200 min-h-full"
               src="https://cdn3.eyeem.com/thumb/55963c765e8222024c8537af38e6c3154a44a8d7-1594228770611/w/800"

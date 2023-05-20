@@ -1,0 +1,23 @@
+[
+  {
+    "reviewText": "The product was excellent! It exceeded my expectations.",
+    "reviewRating": 5,
+    "userName": "Mr. Hasan ",
+    "userEmail": "hasan@hmail.com",
+    "picture": "https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-red-checkered-shirt-fashion-man-posing_158538-4912.jpg?w=826&t=st=1684556955~exp=1684557555~hmac=177773b36f12264558ca8409e4e91dee131cd6096e969a0b6ae19f1145600d48"
+  },
+  {
+    "reviewText": "I had a great experience with their service. Prompt and professional.",
+    "reviewRating": 4.5,
+    "userName": "Robiul Hasan",
+    "userEmail": "robiul@gmail.com",
+    "picture": "https://img.freepik.com/free-photo/portrait-handsome-young-man-with-crossed-arms_176420-15569.jpg?w=900&t=st=1684556835~exp=1684557435~hmac=ea4c9fb98d211a672d365ce6fe9a4c326f5a9269f8ba5c343feab537b43b5f38"
+  },
+  {
+    "reviewText": "I am very satisfied with the quality of the product. Highly recommended!",
+    "reviewRating": 5,
+    "userName": "Mr. Wizard",
+    "userEmail": "wizard@gmail.com",
+    "picture": "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=900&t=st=1684556787~exp=1684557387~hmac=019d697d4437ad71487d1b556489727babc33c3bda397b39f09bcb1980e25410"
+  }
+]
