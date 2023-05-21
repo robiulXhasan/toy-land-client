@@ -20,8 +20,13 @@ const Toys = ({ toy }) => {
       <td>
         <div className="flex items-center space-x-3">
           <div className="avatar">
-            <div className="mask rounded w-auto h-32">
-              <img src={picture} alt="Avatar Tailwind CSS Component" />
+            <div className="mask rounded w-auto h-32 md:h-48 ">
+              <img
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                src={picture}
+                alt="Avatar Tailwind CSS Component"
+              />
             </div>
           </div>
           <div>

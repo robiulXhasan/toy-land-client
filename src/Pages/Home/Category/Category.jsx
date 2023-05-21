@@ -19,7 +19,7 @@ const Category = () => {
     <div className="w-11/12 md:w-10/12 mx-auto text-center mt-20">
       <h4 className="text-xl font-semibold text-red-600">CATEGORY</h4>
       <h1 className="text-2xl md:text-4xl font-bold mb-8">Category Products</h1>
-      <Tabs selectedTabClassName="">
+      <Tabs data-aos="fade-left" data-aos-duration="1000" selectedTabClassName="">
         <TabList>
           <Tab>
             <span onClick={() => handleCategoryData("sports car")} className="text-xl font-medium">

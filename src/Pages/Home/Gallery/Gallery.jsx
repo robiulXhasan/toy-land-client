@@ -9,11 +9,15 @@ const Gallery = () => {
           src="https://img.freepik.com/premium-vector/hand-painted-background-violet-orange-colours_23-2148427578.jpg"
           alt=""
         />
-        <h1 className="text-4xl font-bold text-sky-200  absolute top-10 right-1/4 ">
+        <h1
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          className="text-4xl font-bold text-sky-200  absolute top-10 right-1/4 "
+        >
           Our Toys Gallery
         </h1>
         <div className="w-10/12 mx-auto relative -top-20">
-          <div className="grid  md:grid-cols-2 gap-2 ">
+          <div data-aos="fade-up" data-aos-duration="1000" className="grid  md:grid-cols-2 gap-2  ">
             <img
               className="shadow border-8 border-sky-200 min-h-full"
               src="https://cdn3.eyeem.com/thumb/55963c765e8222024c8537af38e6c3154a44a8d7-1594228770611/w/800"

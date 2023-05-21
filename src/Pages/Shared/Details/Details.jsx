@@ -17,8 +17,14 @@ const Details = () => {
       <ToyBanner name="Toy Details"></ToyBanner>
       <div className="hero w-11/12 md:w-10/12 mx-auto my-10  bg-base-200">
         <div className="hero-content flex-col lg:flex-row gap-10 ">
-          <img src={picture} className="md:w-1/2 rounded-lg shadow-2xl" />
-          <div>
+          <img
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            src={picture}
+            className="md:w-1/2 rounded-lg shadow-2xl"
+          />
+          <div data-aos="fade-up"
+          data-aos-duration="1000">
             <h1 className="text-4xl font-bold">{toy_name}</h1>
             <div className="pt-6 text-lg">
               <span className="font-medium">Seller name: </span>
