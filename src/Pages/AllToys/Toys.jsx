@@ -8,6 +8,7 @@ const Toys = ({ toy }) => {
   const { _id, toy_name, picture, sub_category, price, quantity, seller_name } = toy;
 
   const navigate = useNavigate();
+  // toy details operation
   const handleViewDetails = (id) => {
     if (!user) {
       Swal.fire({ title: "You have to log in first to view details!", icon: "warning" });

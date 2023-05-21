@@ -8,6 +8,7 @@ const AllToys = () => {
   const allToys = useLoaderData();
   useTitle("All Toys");
   const [toys, setToys] = useState(allToys);
+  // handle search operation by name field
   const handleSearch = (event) => {
     event.preventDefault();
     const inputValue = event.target.search.value;

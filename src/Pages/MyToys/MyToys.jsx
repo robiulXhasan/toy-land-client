@@ -16,6 +16,7 @@ const MyToys = () => {
       .then((res) => res.json())
       .then((data) => setToy(data));
   }, [option]);
+  // sorting toys in ascending and descending by price
   const handleSort = (event) => {
     if (event.target.value === "Ascending") {
       setOption(1);

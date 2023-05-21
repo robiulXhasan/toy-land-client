@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import {  FaGoogle } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { ToastContainer } from "react-toastify";
 import useTitle from "../../hooks/useTitle";
@@ -15,6 +15,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
+  // handle user login
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -22,6 +23,7 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     setError("");
+    // handle login with email and password
     LoginUser(email, password)
       .then((result) => {
         navigate(from, { replace: true });
@@ -30,6 +32,7 @@ const Login = () => {
         setError(error.message);
       });
   };
+  // manage password like see or hide password
   const managePassword = (event) => {
     if (event.target.checked) {
       setShow(!show);
@@ -51,7 +54,7 @@ const Login = () => {
   return (
     <div className="hero min-h-screen  w-10/12 mx-auto">
       <ToastContainer />
-    
+
       <div className="hero-content flex-col lg:flex-row gap-20">
         <div className="text-center lg:text-left">
           <img

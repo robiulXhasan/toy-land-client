@@ -1,13 +1,13 @@
 import React from "react";
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
-
 const UpdateToy = () => {
   const id = useParams();
   const toyData = useLoaderData();
   const { price, quantity, description } = toyData;
   const navigate = useNavigate();
 
+  // handle update toy
   const handleToyUpdate = (event) => {
     event.preventDefault();
     const form = event.target;

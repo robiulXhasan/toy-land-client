@@ -10,6 +10,7 @@ const Category = () => {
       .then((res) => res.json())
       .then((data) => setToys(data));
   }, []);
+  // handle category data fetch which is shown in home page using react tab
   const handleCategoryData = (subcategory) => {
     fetch(`https://toy-land-server-five.vercel.app/toys/category?subcategory=${subcategory}&sort=1`)
       .then((res) => res.json())

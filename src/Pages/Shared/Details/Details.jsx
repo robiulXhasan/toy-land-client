@@ -4,7 +4,6 @@ import { useLoaderData } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
-import { AuthContext } from "../../../Providers/AuthProvider";
 import useTitle from "../../../hooks/useTitle";
 
 const Details = () => {
@@ -23,8 +22,7 @@ const Details = () => {
             src={picture}
             className="md:w-1/2 rounded-lg shadow-2xl"
           />
-          <div data-aos="fade-up"
-          data-aos-duration="1000">
+          <div data-aos="fade-up" data-aos-duration="1000">
             <h1 className="text-4xl font-bold">{toy_name}</h1>
             <div className="pt-6 text-lg">
               <span className="font-medium">Seller name: </span>

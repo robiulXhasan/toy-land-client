@@ -10,7 +10,7 @@ const Register = () => {
   const { createUser, profileUpdate, logOut } = useContext(AuthContext);
   const [error, setError] = useState("");
   const navigate = useNavigate();
-
+  // handle user registration
   const handleRegister = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -24,9 +24,10 @@ const Register = () => {
       setError("Password Can not be less than 6 character long");
       return;
     }
-
+    // create user
     createUser(email, password)
       .then((result) => {
+        // update user name and photoURl
         profileUpdate(name, photoURL)
           .then(() => {
             toast("Successfully Registered!!");

@@ -5,7 +5,9 @@ import Swal from "sweetalert2";
 
 const MyToysCard = ({ toy, toys, setToy }) => {
   const { _id, toy_name, picture, sub_category, price, quantity, seller_name } = toy;
+  // toy delete operation
   const handleDelete = (id) => {
+    // sweet alert
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
