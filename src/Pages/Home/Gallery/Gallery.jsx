@@ -9,7 +9,7 @@ const Gallery = () => {
           src="https://img.freepik.com/premium-vector/hand-painted-background-violet-orange-colours_23-2148427578.jpg"
           alt=""
         />
-        <h1 className="text-3xl font-bold text-white  absolute top-10 right-1/4 ">
+        <h1 className="text-4xl font-bold text-sky-200  absolute top-10 right-1/4 ">
           Our Toys Gallery
         </h1>
         <div className="w-10/12 mx-auto relative -top-20">

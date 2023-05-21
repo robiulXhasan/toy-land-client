@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaBeer, FaGoogle } from "react-icons/fa";
+import {  FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { ToastContainer } from "react-toastify";
 import useTitle from "../../hooks/useTitle";
@@ -51,6 +51,7 @@ const Login = () => {
   return (
     <div className="hero min-h-screen  w-10/12 mx-auto">
       <ToastContainer />
+    
       <div className="hero-content flex-col lg:flex-row gap-20">
         <div className="text-center lg:text-left">
           <img

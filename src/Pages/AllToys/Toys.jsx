@@ -1,8 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Toys = ({ toy }) => {
+  const { user } = useContext(AuthContext);
   const { _id, toy_name, picture, sub_category, price, quantity, seller_name } = toy;
+
+  const navigate = useNavigate();
+  const handleViewDetails = (id) => {
+    if (!user) {
+      Swal.fire({ title: "You have to log in first to view details!", icon: "warning" });
+    }
+
+    navigate(`toy/${_id}`);
+  };
   return (
     <tr>
       <td>
@@ -25,11 +37,11 @@ const Toys = ({ toy }) => {
       <td className="text-center">
         <span className="text-lg font-semibold">{quantity}</span>
       </td>
-      <th className="text-center">
-        <Link to={`toy/${_id}`} className="btn btn-outline   text-green-400">
+      <td className="text-center">
+        <button onClick={() => handleViewDetails(_id)} className="btn btn-outline   text-green-400">
           View Details
-        </Link>
-      </th>
+        </button>
+      </td>
     </tr>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import ToyBanner from "../ToyBanner/ToyBanner";
 import { useLoaderData } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
@@ -20,28 +20,28 @@ const Details = () => {
           <img src={picture} className="md:w-1/2 rounded-lg shadow-2xl" />
           <div>
             <h1 className="text-4xl font-bold">{toy_name}</h1>
-            <p className="pt-6 text-lg">
+            <div className="pt-6 text-lg">
               <span className="font-medium">Seller name: </span>
               {seller_name}
-            </p>
-            <p className=" text-lg">
+            </div>
+            <div className=" text-lg">
               <span className="font-medium">Seller email: </span>
               {seller_email}
-            </p>
-            <p className=" text-lg">
+            </div>
+            <div className=" text-lg">
               <span className="font-medium">Price: </span> ${price}
-            </p>
-            <p className=" text-lg">
+            </div>
+            <div className=" text-lg">
               <span className="font-medium">Available Quantity:</span> {quantity}
-            </p>
-            <p className="flex gap-2">
+            </div>
+            <div className="flex gap-2">
               <span className="font-medium">Rating:</span>
               <Rating style={{ maxWidth: 100 }} value={rating} readOnly /> {rating}
-            </p>
-            <p className=" text-lg">
+            </div>
+            <div className=" text-lg">
               <span className="font-medium"> Description:</span> <br />
               {description}
-            </p>
+            </div>
           </div>
         </div>
       </div>
